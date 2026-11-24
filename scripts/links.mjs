@@ -50,7 +50,7 @@ for (const [name, href] of expected) {
   else fail(name, href, "missing from homepage");
 }
 
-for (const id of ["content", "basics", "contact", "enquiry"]) {
+for (const id of ["content", "contact", "enquiry"]) {
   if (html.includes(`id="${id}"`)) pass(`Anchor #${id}`, `#${id}`, "target id exists");
   else fail(`Anchor #${id}`, `#${id}`, "target id missing");
 }

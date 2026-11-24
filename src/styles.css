@@ -295,7 +295,6 @@ p { margin: 0 0 1rem; }
 .socials-hero { margin: 0; }
 
 .intro,
-.basics,
 .scene,
 .contact {
   padding: clamp(48px, 7vw, 88px) 0;
@@ -337,7 +336,6 @@ p { margin: 0 0 1rem; }
 .intro-photo img { object-position: center 22%; }
 
 .intro h2,
-.basics h2,
 .contact h2 {
   margin: 0 0 12px;
   font-weight: 600;
@@ -352,8 +350,7 @@ p { margin: 0 0 1rem; }
 
 .intro-lead { color: var(--ink); }
 
-.cards,
-.tips {
+.cards {
   list-style: none;
   display: grid;
   gap: 12px;
@@ -361,59 +358,43 @@ p { margin: 0 0 1rem; }
   padding: 0;
 }
 
-.cards li,
-.tips li {
+.cards li {
   background: var(--wash);
   border-radius: 8px;
   border-top: 3px solid var(--yellow);
   padding: 16px 16px 8px;
 }
 
-.cards h3,
-.tips h3 {
+.cards h3 {
   margin: 0 0 6px;
   font-size: 1.05rem;
   font-weight: 600;
 }
 
-.cards p,
-.tips p { margin: 0 0 8px; color: var(--muted); }
+.cards p { margin: 0 0 8px; color: var(--muted); }
+
+.card-links {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.card-links a {
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.card-links a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--yellow);
+  text-underline-offset: 3px;
+}
 
 .brands {
   max-width: 44rem;
   margin: 0;
   color: var(--muted);
   font-size: 0.98rem;
-}
-
-.basics { background: var(--wash); }
-
-.basics h2 {
-  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
-  max-width: 16ch;
-  margin-bottom: 20px;
-}
-
-.tips { margin: 0 0 20px; }
-
-.tips li { background: var(--paper); }
-
-.coming-soon {
-  margin: 0;
-  color: var(--navy);
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.coming-soon::before {
-  content: "";
-  display: inline-block;
-  width: 14px;
-  height: 3px;
-  margin-right: 8px;
-  background: var(--yellow);
-  vertical-align: middle;
-  border-radius: 2px;
 }
 
 .scene { background: var(--paper); padding: 12px 0 24px; }
@@ -621,7 +602,6 @@ textarea { min-height: 140px; resize: vertical; }
   }
   .intro-photo { width: 200px; height: 266px; }
   .intro-byline { gap: 28px; }
-  .tips { grid-template-columns: 1fr 1fr; }
   .hero-copy { padding-bottom: max(40px, env(safe-area-inset-bottom)); }
 }
 

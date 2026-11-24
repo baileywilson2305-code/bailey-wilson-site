@@ -1,6 +1,6 @@
 # Bailey Wilson
 
-Personal site for Bailey Wilson, sales executive at Short Marine on the Gold Coast. A short digital business card: a full-bleed boat hero with call, text, email and save-contact buttons, a short note on buying, selling and Boat Basics, a few tips for people who keep scrolling, and ways to get in touch.
+Personal site for Bailey Wilson, sales executive at Short Marine on the Gold Coast. A short digital business card: a full-bleed boat hero with call, text, email and save-contact buttons, a short note on buying, selling and learning, and ways to get in touch.
 
 The enquiry form does not have a server. Submitting it opens the visitor’s mail app with a message to `bailey.wilson@shortmarine.com`.
 
