@@ -23,13 +23,13 @@
 }
 
 :root {
-  --navy: #0b1f3a;
+  --navy: #16233b;
   --yellow: #ffc700;
   --ink: #102033;
   --paper: #ffffff;
-  --wash: #f4f7fb;
+  --wash: #f5f5f3;
   --muted: #4d5d72;
-  --line: rgba(11, 31, 58, 0.12);
+  --line: rgba(22, 35, 59, 0.12);
   --font: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
   --wrap: min(1120px, calc(100% - 32px));
   color-scheme: light;
@@ -134,7 +134,7 @@ p { margin: 0 0 1rem; }
   letter-spacing: 0;
   text-transform: none;
   white-space: nowrap;
-  background: rgba(11, 31, 58, 0.45);
+  background: rgba(22, 35, 59, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: 6px;
   padding: 8px 12px;
@@ -169,7 +169,7 @@ p { margin: 0 0 1rem; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to bottom, rgba(11, 31, 58, 0.5) 0%, rgba(11, 31, 58, 0.08) 22%, rgba(11, 31, 58, 0) 46%, rgba(11, 31, 58, 0.18) 70%, rgba(11, 31, 58, 0.62) 100%);
+    linear-gradient(to bottom, rgba(22, 35, 59, 0.5) 0%, rgba(22, 35, 59, 0.08) 22%, rgba(22, 35, 59, 0) 46%, rgba(22, 35, 59, 0.18) 70%, rgba(22, 35, 59, 0.62) 100%);
 }
 
 .hero-copy {
@@ -188,7 +188,7 @@ p { margin: 0 0 1rem; }
   right: 28%;
   top: 72px;
   bottom: 0;
-  background: linear-gradient(to top, rgba(11, 31, 58, 0.42) 0%, rgba(11, 31, 58, 0.16) 62%, rgba(11, 31, 58, 0) 100%);
+  background: linear-gradient(to top, rgba(22, 35, 59, 0.42) 0%, rgba(22, 35, 59, 0.16) 62%, rgba(22, 35, 59, 0) 100%);
   pointer-events: none;
 }
 
@@ -469,7 +469,7 @@ address a { text-decoration: none; }
   color: var(--navy);
 }
 
-.btn-gold .num { color: rgba(11, 31, 58, 0.72); }
+.btn-gold .num { color: rgba(22, 35, 59, 0.72); }
 
 .btn:hover { background: rgba(255, 255, 255, 0.08); }
 
@@ -520,7 +520,7 @@ textarea { min-height: 140px; resize: vertical; }
 
 .site-footer {
   padding: 22px 0 max(22px, env(safe-area-inset-bottom));
-  background: #081628;
+  background: #0f1726;
   color: rgba(255, 255, 255, 0.78);
   font-size: 0.92rem;
 }
@@ -539,7 +539,7 @@ textarea { min-height: 140px; resize: vertical; }
 @media (max-width: 719px) {
   .hero-media img {
     width: 100%;
-    height: 156%;
+    height: 112%;
     max-width: none;
     top: auto;
     bottom: 0;

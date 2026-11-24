@@ -1,9 +1,9 @@
 {
   "hero": "freedom-345-running-golden-hour.jpg",
   "heroWidths": [
-    768,
     1280,
-    1920
+    1920,
+    2000
   ],
   "intro": [
     450,

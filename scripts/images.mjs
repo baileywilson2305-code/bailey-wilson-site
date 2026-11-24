@@ -34,9 +34,9 @@ async function encode(pipeline, width, base) {
     withoutEnlargement: true,
     fit: "inside",
   });
-  await resized.clone().avif({ quality: 50, effort: 4 }).toFile(`${base}.avif`);
-  await resized.clone().webp({ quality: 74 }).toFile(`${base}.webp`);
-  await resized.clone().jpeg({ quality: 76, mozjpeg: true }).toFile(`${base}.jpg`);
+  await resized.clone().avif({ quality: 68, effort: 4 }).toFile(`${base}.avif`);
+  await resized.clone().webp({ quality: 86 }).toFile(`${base}.webp`);
+  await resized.clone().jpeg({ quality: 86, mozjpeg: true }).toFile(`${base}.jpg`);
 }
 
 async function responsive(source, name, widths) {
@@ -134,7 +134,7 @@ const feature = await must("freedom-345-aerial-running-wake.jpg");
 const rest = await must("freedom-345-at-rest-cliffs.jpg");
 const spit = await must("spit-marina-beach-and-yachts.jpg");
 
-const heroInfo = await responsive(hero, "hero", [768, 1280, 1920]);
+const heroInfo = await responsive(hero, "hero", [1280, 1920, 2000]);
 const introInfo = await responsive(intro, "intro", [450, 675]);
 await responsive(helmPortrait, "bailey-helm", [450, 675]);
 await responsive(support, "support", [720, 1100]);
