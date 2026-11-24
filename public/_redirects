@@ -1,0 +1,3 @@
+# Path redirects only. _redirects cannot switch hostnames.
+# baileywilsonboats.au is redirected in src/index.js once that custom domain
+# is uncommented in wrangler.jsonc.

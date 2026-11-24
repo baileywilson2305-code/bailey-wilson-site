@@ -1,0 +1,22 @@
+{
+  "name": "bailey-wilson-site",
+  "private": true,
+  "type": "module",
+  "description": "Personal site for Bailey Wilson, sales executive and boat broker at Short Marine, Runaway Bay.",
+  "scripts": {
+    "images": "node scripts/images.mjs",
+    "predev": "node scripts/images.mjs",
+    "dev": "vite",
+    "prebuild": "node scripts/images.mjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "node scripts/check.mjs",
+    "deploy": "npm run build && wrangler deploy",
+    "deploy:dry": "npm run build && wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.4",
+    "vite": "^7.2.2",
+    "wrangler": "^4.50.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "hero": [
+    768,
+    1280,
+    1920
+  ],
+  "intro": [
+    450,
+    675
+  ],
+  "logo": {
+    "width": 825,
+    "height": 64
+  },
+  "portrait": "bailey-intro-arms-crossed.jpg"
+}

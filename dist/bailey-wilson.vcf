@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Wilson;Bailey;;;
+FN:Bailey Wilson
+ORG:Short Marine
+TITLE:Sales Executive
+TEL;TYPE=CELL,VOICE:+61485025920
+EMAIL;TYPE=INTERNET:bailey.wilson@shortmarine.com
+URL:https://baileywilson.au
+ADR;TYPE=WORK:;;1/247 Bayview Street;Runaway Bay;QLD;4216;Australia
+item1.URL:https://www.instagram.com/baileywilsonboats/
+item1.X-ABLabel:Instagram
+END:VCARD

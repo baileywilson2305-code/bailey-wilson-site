@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "bailey-wilson-site",
+  // Today's date. Review runtime notes before moving it forward.
+  "compatibility_date": "2026-11-23",
+  "workers_dev": true,
+  "observability": {
+    "enabled": true
+  },
+  // Worker runs first so baileywilsonboats.au can 301 before an asset matches.
+  // This name does not replace bwb-social or mays-wardrobe-reminders.
+  "main": "./src/index.js",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": true
+  },
+}
