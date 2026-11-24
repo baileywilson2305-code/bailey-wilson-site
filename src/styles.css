@@ -357,7 +357,7 @@ p { margin: 0 0 1rem; }
 
 .frame-feature { aspect-ratio: 16 / 8; }
 
-.frame-feature img { object-position: center 58%; }
+.frame-feature img { object-position: center 50%; }
 
 .frame-pair {
   display: grid;

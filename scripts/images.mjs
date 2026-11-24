@@ -126,15 +126,15 @@ async function must(name) {
   return file;
 }
 
-const hero = await must("freedom-345-running-golden-hour.jpg");
+const hero = await must("tangalooma-sandbar-fleet-aerial.jpg");
 const intro = await must("bailey-intro-arms-crossed.jpg");
 const helmPortrait = await must("bailey-at-helm.jpg");
 const support = await must("freedom-345-cockpit-lounge.jpg");
-const feature = await must("freedom-345-aerial-running-wake.jpg");
-const rest = await must("freedom-345-at-rest-cliffs.jpg");
+const feature = await must("tangalooma-four-boats-clear-water.jpg");
+const rest = await must("shootout-fleet-sunset-aerial.jpg");
 const spit = await must("spit-marina-beach-and-yachts.jpg");
 
-const heroInfo = await responsive(hero, "hero", [1280, 1920, 2000]);
+const heroInfo = await responsive(hero, "hero", [1280, 1920, 2400, 3000]);
 const introInfo = await responsive(intro, "intro", [450, 675]);
 await responsive(helmPortrait, "bailey-helm", [450, 675]);
 await responsive(support, "support", [720, 1100]);
@@ -146,13 +146,13 @@ await icons();
 await openGraph(hero);
 
 const manifest = {
-  hero: "freedom-345-running-golden-hour.jpg",
+  hero: "tangalooma-sandbar-fleet-aerial.jpg",
   heroWidths: heroInfo.widths,
   intro: introInfo.widths,
   logo: logoInfo,
   gallery: [
-    "freedom-345-aerial-running-wake.jpg",
-    "freedom-345-at-rest-cliffs.jpg",
+    "tangalooma-four-boats-clear-water.jpg",
+    "shootout-fleet-sunset-aerial.jpg",
     "spit-marina-beach-and-yachts.jpg",
   ],
   removed: ["boat-works-canal-rainbow.jpg"],

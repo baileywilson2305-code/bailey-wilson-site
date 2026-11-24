@@ -1,9 +1,10 @@
 {
-  "hero": "freedom-345-running-golden-hour.jpg",
+  "hero": "tangalooma-sandbar-fleet-aerial.jpg",
   "heroWidths": [
     1280,
     1920,
-    2000
+    2400,
+    3000
   ],
   "intro": [
     450,
@@ -14,8 +15,8 @@
     "height": 64
   },
   "gallery": [
-    "freedom-345-aerial-running-wake.jpg",
-    "freedom-345-at-rest-cliffs.jpg",
+    "tangalooma-four-boats-clear-water.jpg",
+    "shootout-fleet-sunset-aerial.jpg",
     "spit-marina-beach-and-yachts.jpg"
   ],
   "removed": [
