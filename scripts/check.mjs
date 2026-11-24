@@ -11,8 +11,8 @@ async function must(file) {
 
 const html = await readFile(path.join(dist, "index.html"), "utf8");
 const needles = [
-  "Find the",
-  "right boat.",
+  "Boating,",
+  "made simple.",
   "Buying, selling and learning.",
   "Learn &amp; Explore",
   "5+ years · Short Marine · Gold Coast &amp; across Australia",

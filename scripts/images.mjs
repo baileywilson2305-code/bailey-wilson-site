@@ -91,7 +91,7 @@ async function openGraph(source) {
     .resize(width, height, { fit: "cover", position: "centre" })
     .toBuffer();
 
-  const title = escapeXml("Find the right boat.");
+  const title = escapeXml("Boating, made simple.");
   const line = escapeXml("Less second-guessing. More time on the water.");
   const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">
