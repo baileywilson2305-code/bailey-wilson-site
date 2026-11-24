@@ -1,6 +1,6 @@
 # Bailey Wilson
 
-Personal site for Bailey Wilson, sales executive at Short Marine in Runaway Bay on the Gold Coast. One static page: a full-bleed boat hero, a short note on buying, selling and trade-ins, how the Short Marine team stays involved after the sale, and ways to text, call, email or send an enquiry.
+Personal site for Bailey Wilson, sales executive at Short Marine in Runaway Bay on the Gold Coast. One static page: a full-bleed boat hero, a short note on buying and selling, how the Short Marine team stays involved after the sale, and ways to text, call, email or send an enquiry.
 
 The enquiry form does not have a server. Submitting it opens the visitor’s mail app with a message to `bailey.wilson@shortmarine.com`.
 
