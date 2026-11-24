@@ -1,6 +1,6 @@
 # Bailey Wilson
 
-Personal site for Bailey Wilson, sales executive and boat broker at Short Marine in Runaway Bay on the Gold Coast. One static page: a full-bleed hero, a short introduction, three ways Short Marine stays involved after the sale, and buttons to text, call, email or send an enquiry.
+Personal site for Bailey Wilson, sales executive at Short Marine in Runaway Bay on the Gold Coast. One static page: a full-bleed boat hero, a short note on buying, selling and trade-ins, how the Short Marine team stays involved after the sale, and ways to text, call, email or send an enquiry.
 
 The enquiry form does not have a server. Submitting it opens the visitor’s mail app with a message to `bailey.wilson@shortmarine.com`.
 
@@ -22,17 +22,16 @@ npm run preview
 
 ## Photos
 
-Boat pictures are from the Short Marine marketing drive: the February 2026 Grady-White 345 Freedom shoot, The Spit, and The Boat Works. Bailey’s own boat photos are not used. His two small portraits stay. Originals live in `images/originals/`. The build writes AVIF, WebP and JPEG into `public/img/`. Those generated files are not committed.
+Boat pictures are from the Short Marine marketing drive (the February 2026 Grady-White 345 Freedom shoot, and The Spit). Bailey’s own boat photos are not used. The Boat Works canal rainbow shot is not used. His two portraits stay. Originals live in `images/originals/`. The build writes AVIF, WebP and JPEG into `public/img/`. Those generated files are not committed.
 
 | File | Use |
 | --- | --- |
-| `freedom-345-aerial-running-wake.jpg` | Hero and social image |
-| `freedom-345-running-golden-hour.jpg` | Full-bleed break after the intro |
+| `freedom-345-running-golden-hour.jpg` | Hero and social image. Boat sits clear of the bottom-left headline. |
 | `freedom-345-cockpit-lounge.jpg` | Support section |
-| `freedom-345-running-cliffs.jpg`, `freedom-345-at-rest-cliffs.jpg`, `spit-marina-beach-and-yachts.jpg`, `freedom-345-two-boats-open-water.jpg` | Gallery |
-| `boat-works-canal-rainbow.jpg` | Full-bleed break before contact |
+| `freedom-345-aerial-running-wake.jpg` | Wide gallery photo |
+| `freedom-345-at-rest-cliffs.jpg`, `spit-marina-beach-and-yachts.jpg` | Gallery pair |
 | `bailey-intro-arms-crossed.jpg` | Small intro portrait |
-| `bailey-at-helm.jpg` | Small contact portrait |
+| `bailey-at-helm.jpg` | Contact portrait |
 
 ## Deploy on Cloudflare Workers
 
@@ -49,5 +48,6 @@ npm run deploy
 
 Docs: [static assets](https://developers.cloudflare.com/workers/static-assets/), [custom domains](https://developers.cloudflare.com/workers/configuration/routing/custom-domains/), [redirects](https://developers.cloudflare.com/workers/static-assets/redirects/). `_redirects` cannot change host, which is why the boats domain redirect is in the Worker.
 
-The canonical repo is [baileywilson2305-code/bailey-wilson-site](https://github.com/baileywilson2305-code/bailey-wilson-site).
+`Save my contact` downloads `bailey-wilson.vcf`. On Cloudflare, `public/_headers` serves it as `text/vcard; charset=utf-8` with `Content-Disposition: attachment; filename="bailey-wilson.vcf"`.
 
+The canonical repo is [baileywilson2305-code/bailey-wilson-site](https://github.com/baileywilson2305-code/bailey-wilson-site).

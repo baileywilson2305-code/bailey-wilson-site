@@ -16,4 +16,6 @@
     "not_found_handling": "404-page",
     "run_worker_first": true
   },
-}
+  // Zones exist on the account. Nameservers may still be switching, so the
+  // first deploy that attaches these hostnames can wait until each zone is active.
+  }

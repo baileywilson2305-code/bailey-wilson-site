@@ -1,2 +1,12 @@
-node_modules/
-.wrangler/
+node_modules
+dist
+.wrangler
+.dev.vars
+.dev.vars.*
+*.log
+.DS_Store
+public/img
+public/favicon-32.png
+public/apple-touch-icon.png
+public/icon-192.png
+wrangler.preview.jsonc

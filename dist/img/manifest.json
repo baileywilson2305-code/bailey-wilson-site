@@ -1,5 +1,6 @@
 {
-  "hero": [
+  "hero": "freedom-345-running-golden-hour.jpg",
+  "heroWidths": [
     768,
     1280,
     1920
@@ -12,5 +13,12 @@
     "width": 825,
     "height": 64
   },
-  "portrait": "bailey-intro-arms-crossed.jpg"
+  "gallery": [
+    "freedom-345-aerial-running-wake.jpg",
+    "freedom-345-at-rest-cliffs.jpg",
+    "spit-marina-beach-and-yachts.jpg"
+  ],
+  "removed": [
+    "boat-works-canal-rainbow.jpg"
+  ]
 }

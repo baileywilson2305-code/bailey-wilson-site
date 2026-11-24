@@ -7,6 +7,9 @@
 /img/*
   Cache-Control: public, max-age=604800
 
+/fonts/*
+  Cache-Control: public, max-age=2592000
+
 /favicon.svg
   Cache-Control: public, max-age=604800
 
@@ -18,3 +21,7 @@
 
 /icon-192.png
   Cache-Control: public, max-age=604800
+
+/bailey-wilson.vcf
+  Content-Type: text/vcard; charset=utf-8
+  Content-Disposition: attachment; filename="bailey-wilson.vcf"

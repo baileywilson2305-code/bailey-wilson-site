@@ -1,4 +1,4 @@
-import { access, mkdir, readFile, writeFile } from "node:fs/promises";
+import { access, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
@@ -7,7 +7,9 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const originals = path.join(root, "images", "originals");
 const outDir = path.join(root, "public", "img");
 
-const FONT = "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf";
+const INTER = "/usr/share/fonts/truetype/macos/Inter-SemiBold.ttf";
+const NAVY = "#0B1F3A";
+const YELLOW = "#ffc700";
 
 async function exists(file) {
   try {
@@ -89,24 +91,24 @@ async function openGraph(source) {
     .resize(width, height, { fit: "cover", position: "centre" })
     .toBuffer();
 
-  const title = escapeXml("BAILEY WILSON");
-  const line = escapeXml("HELPING YOU BOAT WITH CONFIDENCE");
+  const title = escapeXml("Find the right boat.");
+  const line = escapeXml("Less second-guessing. More time on the water.");
   const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#05080f" stop-opacity="0.15"/>
-      <stop offset="0.45" stop-color="#05080f" stop-opacity="0.05"/>
-      <stop offset="1" stop-color="#05080f" stop-opacity="0.88"/>
+      <stop offset="0" stop-color="${NAVY}" stop-opacity="0.18"/>
+      <stop offset="0.42" stop-color="${NAVY}" stop-opacity="0.02"/>
+      <stop offset="1" stop-color="${NAVY}" stop-opacity="0.78"/>
     </linearGradient>
     <style>
-      @font-face { font-family: "LibSans"; src: url("file://${FONT}"); font-weight: 700; }
+      @font-face { font-family: "Inter"; src: url("file://${INTER}"); font-weight: 600; }
     </style>
   </defs>
   <rect width="${width}" height="${height}" fill="url(#shade)"/>
-  <text x="64" y="500" fill="#ffc700" font-family="LibSans, Liberation Sans, sans-serif" font-size="22" font-weight="700" letter-spacing="4">SHORT MARINE · RUNAWAY BAY</text>
-  <text x="64" y="552" fill="#f6f3ec" font-family="LibSans, Liberation Sans, sans-serif" font-size="48" font-weight="700">${title}</text>
-  <text x="64" y="596" fill="#ffc700" font-family="LibSans, Liberation Sans, sans-serif" font-size="26" font-weight="700">${line}</text>
+  <text x="64" y="478" fill="${YELLOW}" font-family="Inter, sans-serif" font-size="22" font-weight="600">Short Marine · Runaway Bay</text>
+  <text x="64" y="538" fill="#ffffff" font-family="Inter, sans-serif" font-size="54" font-weight="600">${title}</text>
+  <text x="64" y="584" fill="#ffffff" font-family="Inter, sans-serif" font-size="26" font-weight="600">${line}</text>
 </svg>`;
 
   await sharp(photo)
@@ -115,6 +117,7 @@ async function openGraph(source) {
     .toFile(path.join(outDir, "og.jpg"));
 }
 
+await rm(outDir, { recursive: true, force: true });
 await mkdir(outDir, { recursive: true });
 
 async function must(name) {
@@ -123,38 +126,36 @@ async function must(name) {
   return file;
 }
 
-const hero = await must("freedom-345-aerial-running-wake.jpg");
+const hero = await must("freedom-345-running-golden-hour.jpg");
 const intro = await must("bailey-intro-arms-crossed.jpg");
 const helmPortrait = await must("bailey-at-helm.jpg");
 const support = await must("freedom-345-cockpit-lounge.jpg");
-
-const wide = [
-  ["freedom-345-running-golden-hour.jpg", "break-run", [1000, 1600]],
-  ["boat-works-canal-rainbow.jpg", "break-canal", [1000, 1600]],
-];
-const gallery = [
-  ["freedom-345-running-cliffs.jpg", "cliffs", [720, 1100]],
-  ["freedom-345-at-rest-cliffs.jpg", "rest", [720, 1100]],
-  ["spit-marina-beach-and-yachts.jpg", "spit", [720, 1100]],
-  ["freedom-345-two-boats-open-water.jpg", "pair", [720, 1100]],
-];
+const feature = await must("freedom-345-aerial-running-wake.jpg");
+const rest = await must("freedom-345-at-rest-cliffs.jpg");
+const spit = await must("spit-marina-beach-and-yachts.jpg");
 
 const heroInfo = await responsive(hero, "hero", [768, 1280, 1920]);
 const introInfo = await responsive(intro, "intro", [450, 675]);
 await responsive(helmPortrait, "bailey-helm", [450, 675]);
 await responsive(support, "support", [720, 1100]);
-for (const [file, name, widths] of [...wide, ...gallery]) {
-  await responsive(await must(file), name, widths);
-}
+await responsive(feature, "feature", [900, 1600]);
+await responsive(rest, "rest", [720, 1100]);
+await responsive(spit, "spit", [720, 1100]);
 const logoInfo = await logo();
 await icons();
 await openGraph(hero);
 
 const manifest = {
-  hero: heroInfo.widths,
+  hero: "freedom-345-running-golden-hour.jpg",
+  heroWidths: heroInfo.widths,
   intro: introInfo.widths,
   logo: logoInfo,
-  portrait: "bailey-intro-arms-crossed.jpg",
+  gallery: [
+    "freedom-345-aerial-running-wake.jpg",
+    "freedom-345-at-rest-cliffs.jpg",
+    "spit-marina-beach-and-yachts.jpg",
+  ],
+  removed: ["boat-works-canal-rainbow.jpg"],
 };
 await writeFile(path.join(outDir, "manifest.json"), JSON.stringify(manifest, null, 2));
 console.log("images ready", manifest);
