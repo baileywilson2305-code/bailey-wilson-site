@@ -17,6 +17,7 @@
   },
   // Zones exist on the account. Nameservers may still be switching, so the
   // first deploy that attaches these hostnames can wait until each zone is active.
+  "workers_dev": true,
   "routes": [
     { "pattern": "baileywilson.au", "custom_domain": true },
     { "pattern": "www.baileywilson.au", "custom_domain": true },
