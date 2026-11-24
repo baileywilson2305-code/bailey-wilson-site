@@ -184,11 +184,11 @@ p { margin: 0 0 1rem; }
   content: "";
   position: absolute;
   z-index: -1;
-  left: -16px;
-  right: 28%;
-  top: 72px;
+  left: calc(50% - 50vw);
+  right: calc(50% - 50vw);
+  top: 40px;
   bottom: 0;
-  background: linear-gradient(to top, rgba(22, 35, 59, 0.42) 0%, rgba(22, 35, 59, 0.16) 62%, rgba(22, 35, 59, 0) 100%);
+  background: linear-gradient(to top, rgba(22, 35, 59, 0.55) 0%, rgba(22, 35, 59, 0.28) 60%, rgba(22, 35, 59, 0) 100%);
   pointer-events: none;
 }
 
@@ -550,7 +550,6 @@ textarea { min-height: 140px; resize: vertical; }
 @media (min-width: 720px) {
   :root { --wrap: min(1120px, calc(100% - 64px)); }
   .brand img { height: 22px; max-width: 280px; }
-  .hero-copy::before { left: -32px; }
   .hero-media img {
     height: 100%;
     top: 0;
