@@ -127,15 +127,14 @@ async function must(name) {
 }
 
 const hero = await must("tangalooma-sandbar-fleet-aerial.jpg");
-const intro = await must("bailey-at-helm.jpg");
+const intro = await must("bailey-intro-arms-crossed.jpg");
 // New output name (bailey-portrait, not bailey-helm) so phones do not keep the
 // cached helm shot from when this URL pointed at bailey-at-helm.jpg.
 const portrait = await must("bailey-intro-arms-crossed.jpg");
 const scene = await must("tangalooma-two-boats-turquoise-bay.jpg");
 
 const heroInfo = await responsive(hero, "hero", [1280, 1920, 2400, 3000]);
-const introInfo = await responsive(intro, "intro", [450, 675]);
-await responsive(portrait, "bailey-portrait", [450, 675]);
+const introInfo = await responsive(intro, "intro-portrait", [450, 675]);
 await responsive(scene, "scene", [720, 1100]);
 const logoInfo = await logo();
 await icons();
