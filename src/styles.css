@@ -24,22 +24,24 @@
 
 :root {
   --navy: #16233b;
+  --navy-mid: #1c2c49;
+  --navy-deep: #0f1726;
   --yellow: #ffc700;
-  --ink: #102033;
-  --paper: #ffffff;
-  --wash: #f5f5f3;
-  --muted: #4d5d72;
-  --line: rgba(22, 35, 59, 0.12);
+  --ink: #ffffff;
+  --paper: #16233b;
+  --wash: #243656;
+  --muted: rgba(255, 255, 255, 0.75);
+  --line: rgba(255, 255, 255, 0.22);
   --font: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
   --wrap: min(1120px, calc(100% - 32px));
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 *,
 *::before,
 *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; background: var(--navy); }
 
 body {
   margin: 0;
@@ -83,7 +85,7 @@ p { margin: 0 0 1rem; }
 
 .eyebrow {
   margin: 0 0 10px;
-  color: var(--navy);
+  color: #fff;
   font-size: 0.92rem;
   font-weight: 600;
   letter-spacing: 0;
@@ -278,7 +280,7 @@ p { margin: 0 0 1rem; }
   border: 1px solid rgba(255, 255, 255, 0.35);
   color: #fff;
   text-decoration: none;
-  background: rgba(22, 35, 59, 0.35);
+  background: rgba(15, 23, 38, 0.45);
 }
 
 .socials a:hover {
@@ -300,7 +302,7 @@ p { margin: 0 0 1rem; }
   padding: clamp(48px, 7vw, 88px) 0;
 }
 
-.intro { background: var(--paper); }
+.intro { background: var(--navy-mid); }
 
 .intro-byline {
   display: flex;
@@ -361,6 +363,7 @@ p { margin: 0 0 1rem; }
 .cards li {
   background: var(--wash);
   border-radius: 8px;
+  border: 1px solid var(--line);
   border-top: 3px solid var(--yellow);
   padding: 16px 16px 8px;
 }
@@ -376,17 +379,17 @@ p { margin: 0 0 1rem; }
 .card-links {
   font-size: 0.92rem;
   font-weight: 600;
-  color: var(--navy);
+  color: var(--yellow);
 }
 
 .card-links a {
-  color: var(--navy);
+  color: var(--yellow);
   text-decoration: none;
 }
 
 .card-links a:hover {
+  color: #ffd24d;
   text-decoration: underline;
-  text-decoration-color: var(--yellow);
   text-underline-offset: 3px;
 }
 
@@ -397,14 +400,14 @@ p { margin: 0 0 1rem; }
   font-size: 0.98rem;
 }
 
-.scene { background: var(--paper); padding: 12px 0 24px; }
+.scene { background: var(--navy); padding: 12px 0 24px; }
 
 .scene-photo { aspect-ratio: 16 / 8; }
 
 .scene-photo img { object-position: center 50%; }
 
 .contact {
-  background: var(--navy);
+  background: var(--navy-mid);
   color: #fff;
 }
 
@@ -434,13 +437,14 @@ p { margin: 0 0 1rem; }
 address a,
 .contact-extra a,
 .site-footer a {
-  color: #fff;
+  color: var(--yellow);
   text-underline-offset: 3px;
 }
 
 .contact-direct a:hover,
 address a:hover,
-.contact-extra a:hover { color: var(--yellow); }
+.contact-extra a:hover,
+.site-footer a:hover { color: #ffd24d; }
 
 address {
   font-style: normal;
@@ -539,12 +543,38 @@ textarea {
   min-height: 48px;
   padding: 12px 14px;
   border-radius: 6px;
-  border: 1px solid transparent;
-  background: #fff;
-  color: var(--navy);
+  border: 1px solid var(--line);
+  background: var(--navy-deep);
+  color: #fff;
   font: inherit;
   font-weight: 400;
   font-size: 16px;
+  color-scheme: dark;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  border-color: var(--yellow);
+}
+
+option {
+  background: var(--navy-deep);
+  color: #fff;
+}
+
+input:-webkit-autofill,
+select:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: #fff;
+  caret-color: #fff;
+  box-shadow: 0 0 0 1000px var(--navy-deep) inset;
+  transition: background-color 9999s ease-out;
 }
 
 textarea { min-height: 140px; resize: vertical; }
@@ -557,8 +587,8 @@ textarea { min-height: 140px; resize: vertical; }
 
 .site-footer {
   padding: 22px 0 max(22px, env(safe-area-inset-bottom));
-  background: #0f1726;
-  color: rgba(255, 255, 255, 0.78);
+  background: var(--navy-deep);
+  color: var(--muted);
   font-size: 0.92rem;
 }
 
@@ -577,8 +607,6 @@ textarea { min-height: 140px; resize: vertical; }
   height: 36px;
   background: transparent;
 }
-
-.site-footer a:hover { color: var(--yellow); }
 
 @media (max-width: 719px) {
   .hero-media img {
