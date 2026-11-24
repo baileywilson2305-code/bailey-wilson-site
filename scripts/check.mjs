@@ -31,8 +31,7 @@ const needles = [
   "Tips, tech and new releases",
   "og:image",
   "/img/og.jpg",
-  "inter-latin-600-normal.woff2",
-  "#16233b",
+  "#05080f",
 ];
 for (const needle of needles) {
   if (!html.includes(needle)) {
@@ -71,7 +70,7 @@ const { readdir } = await import("node:fs/promises");
 const assetNames = await readdir(path.join(dist, "assets"));
 const cssName = assetNames.find((name) => name.endsWith(".css"));
 const css = await readFile(path.join(dist, "assets", cssName), "utf8");
-if (!css.includes("Inter") || !css.includes("#ffc700") || !css.includes("#16233b")) {
+if (!css.includes("Helvetica Neue") || !css.includes("#ffc700") || !css.includes("#05080f")) {
   console.error("CSS palette or font check failed");
   process.exit(1);
 }
