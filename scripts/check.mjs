@@ -15,7 +15,7 @@ const needles = [
   "made simple.",
   "Buying, selling and learning.",
   "Learn &amp; Explore",
-  "5+ years · Short Marine · Gold Coast &amp; across Australia",
+  "Short Marine · Gold Coast &amp; across Australia",
   "How would you like to reach me?",
   "Grady-White distributor",
   "Chris-Craft, Regal and Capelli",
