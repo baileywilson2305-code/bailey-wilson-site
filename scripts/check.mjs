@@ -27,6 +27,7 @@ const needles = [
   "tiktok.com/@baileywilsonboats",
   "youtube.com/@baileywilson-boats",
   "linkedin.com/in/bailey-wilson-670230189",
+  "facebook.com/people/Bailey-Wilson-Boats/100092169316959",
   "bailey-portrait",
   "Tips, tech and new releases",
   "og:image",
@@ -123,6 +124,7 @@ for (const field of [
   "https://www.tiktok.com/@baileywilsonboats",
   "https://www.youtube.com/@baileywilson-boats",
   "https://www.linkedin.com/in/bailey-wilson-670230189",
+  "https://www.facebook.com/people/Bailey-Wilson-Boats/100092169316959/",
 ]) {
   if (!vcardText.includes(field)) {
     console.error("vCard missing", field);

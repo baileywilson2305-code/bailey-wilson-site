@@ -38,6 +38,7 @@ const expected = [
   ["TikTok", "https://www.tiktok.com/@baileywilsonboats"],
   ["YouTube", "https://www.youtube.com/@baileywilson-boats"],
   ["LinkedIn", "https://www.linkedin.com/in/bailey-wilson-670230189"],
+  ["Facebook", "https://www.facebook.com/people/Bailey-Wilson-Boats/100092169316959/"],
   ["Save my contact", "/bailey-wilson.vcf"],
   ["Map", "https://maps.google.com/?q=1/247+Bayview+Street,+Runaway+Bay+QLD+4216"],
   ["Short Marine", "https://shortmarine.com.au/"],
