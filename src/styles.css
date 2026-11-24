@@ -243,8 +243,8 @@ p { margin: 0 0 1rem; }
 }
 
 .intro-photo {
-  width: 84px;
-  height: 112px;
+  width: 132px;
+  height: 176px;
   flex: none;
 }
 
@@ -588,4 +588,9 @@ textarea { min-height: 140px; resize: vertical; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+}
+
+@media (min-width: 720px) {
+  .intro-photo { width: 200px; height: 266px; }
+  .intro-byline { gap: 28px; }
 }

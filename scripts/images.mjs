@@ -127,9 +127,9 @@ async function must(name) {
 }
 
 const hero = await must("tangalooma-sandbar-fleet-aerial.jpg");
-const intro = await must("bailey-intro-arms-crossed.jpg");
-const helmPortrait = await must("bailey-at-helm.jpg");
-const support = await must("freedom-345-cockpit-lounge.jpg");
+const intro = await must("bailey-at-helm.jpg");
+const helmPortrait = await must("bailey-intro-arms-crossed.jpg");
+const support = await must("tangalooma-two-boats-turquoise-bay.jpg");
 const feature = await must("tangalooma-four-boats-clear-water.jpg");
 const rest = await must("shootout-fleet-sunset-aerial.jpg");
 const spit = await must("spit-marina-beach-and-yachts.jpg");
