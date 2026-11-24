@@ -10,16 +10,15 @@
     450,
     675
   ],
+  "portrait": "bailey-intro-arms-crossed.jpg",
+  "portraitName": "bailey-portrait",
+  "scene": "tangalooma-two-boats-turquoise-bay.jpg",
   "logo": {
     "width": 825,
     "height": 64
   },
-  "gallery": [
-    "tangalooma-four-boats-clear-water.jpg",
-    "shootout-fleet-sunset-aerial.jpg",
-    "spit-marina-beach-and-yachts.jpg"
-  ],
   "removed": [
-    "boat-works-canal-rainbow.jpg"
+    "boat-works-canal-rainbow.jpg",
+    "bailey-helm"
   ]
 }

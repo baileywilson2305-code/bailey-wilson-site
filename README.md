@@ -1,6 +1,6 @@
 # Bailey Wilson
 
-Personal site for Bailey Wilson, sales executive at Short Marine in Runaway Bay on the Gold Coast. One static page: a full-bleed boat hero, a short note on buying and selling, how the Short Marine team stays involved after the sale, and ways to text, call, email or send an enquiry.
+Personal site for Bailey Wilson, sales executive at Short Marine on the Gold Coast. A short digital business card: a full-bleed boat hero with call, text, email and save-contact buttons, a short note on buying, selling and Boat Basics, a few tips for people who keep scrolling, and ways to get in touch.
 
 The enquiry form does not have a server. Submitting it opens the visitor’s mail app with a message to `bailey.wilson@shortmarine.com`.
 
@@ -22,16 +22,14 @@ npm run preview
 
 ## Photos
 
-Boat pictures are from the Short Marine marketing drive (the February 2026 Grady-White 345 Freedom shoot, and The Spit). Bailey’s own boat photos are not used. The Boat Works canal rainbow shot is not used. His two portraits stay. Originals live in `images/originals/`. The build writes AVIF, WebP and JPEG into `public/img/`. Those generated files are not committed.
+Boat pictures are from the Short Marine marketing drive (the February 2026 Grady-White 345 Freedom shoot, and The Spit). Bailey’s own boat photos are not used. The Boat Works canal rainbow shot is not used. His portraits stay. Only Short Marine marketing photos plus those portraits are used. Originals live in `images/originals/`. The build writes AVIF, WebP and JPEG into `public/img/`. Those generated files are not committed.
 
 | File | Use |
 | --- | --- |
-| `freedom-345-running-golden-hour.jpg` | Hero and social image. Boat sits clear of the bottom-left headline. |
-| `freedom-345-cockpit-lounge.jpg` | Support section |
-| `freedom-345-aerial-running-wake.jpg` | Wide gallery photo |
-| `freedom-345-at-rest-cliffs.jpg`, `spit-marina-beach-and-yachts.jpg` | Gallery pair |
-| `bailey-intro-arms-crossed.jpg` | Small intro portrait |
-| `bailey-at-helm.jpg` | Contact portrait |
+| `tangalooma-sandbar-fleet-aerial.jpg` | Hero and social image. |
+| `bailey-at-helm.jpg` | Intro portrait. |
+| `bailey-intro-arms-crossed.jpg` | Contact portrait. Built as `bailey-portrait-*` so browsers do not keep an old cached helm shot. |
+| `tangalooma-two-boats-turquoise-bay.jpg` | Single scene photo above the contact section. |
 
 ## Deploy on Cloudflare Workers
 

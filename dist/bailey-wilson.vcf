@@ -10,4 +10,10 @@ URL:https://baileywilson.au
 ADR;TYPE=WORK:;;1/247 Bayview Street;Runaway Bay;QLD;4216;Australia
 item1.URL:https://www.instagram.com/baileywilsonboats/
 item1.X-ABLabel:Instagram
+item2.URL:https://www.tiktok.com/@baileywilsonboats
+item2.X-ABLabel:TikTok
+item3.URL:https://www.youtube.com/@baileywilson-boats
+item3.X-ABLabel:YouTube
+item4.URL:https://www.linkedin.com/in/bailey-wilson-670230189
+item4.X-ABLabel:LinkedIn
 END:VCARD

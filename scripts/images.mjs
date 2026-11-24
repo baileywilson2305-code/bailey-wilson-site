@@ -8,7 +8,7 @@ const originals = path.join(root, "images", "originals");
 const outDir = path.join(root, "public", "img");
 
 const INTER = "/usr/share/fonts/truetype/macos/Inter-SemiBold.ttf";
-const NAVY = "#0B1F3A";
+const NAVY = "#16233b";
 const YELLOW = "#ffc700";
 
 async function exists(file) {
@@ -106,7 +106,7 @@ async function openGraph(source) {
     </style>
   </defs>
   <rect width="${width}" height="${height}" fill="url(#shade)"/>
-  <text x="64" y="478" fill="${YELLOW}" font-family="Inter, sans-serif" font-size="22" font-weight="600">Short Marine · Runaway Bay</text>
+  <text x="64" y="478" fill="${YELLOW}" font-family="Inter, sans-serif" font-size="22" font-weight="600">Short Marine · Gold Coast</text>
   <text x="64" y="538" fill="#ffffff" font-family="Inter, sans-serif" font-size="54" font-weight="600">${title}</text>
   <text x="64" y="584" fill="#ffffff" font-family="Inter, sans-serif" font-size="26" font-weight="600">${line}</text>
 </svg>`;
@@ -128,19 +128,15 @@ async function must(name) {
 
 const hero = await must("tangalooma-sandbar-fleet-aerial.jpg");
 const intro = await must("bailey-at-helm.jpg");
-const helmPortrait = await must("bailey-intro-arms-crossed.jpg");
-const support = await must("tangalooma-two-boats-turquoise-bay.jpg");
-const feature = await must("tangalooma-four-boats-clear-water.jpg");
-const rest = await must("shootout-fleet-sunset-aerial.jpg");
-const spit = await must("spit-marina-beach-and-yachts.jpg");
+// New output name (bailey-portrait, not bailey-helm) so phones do not keep the
+// cached helm shot from when this URL pointed at bailey-at-helm.jpg.
+const portrait = await must("bailey-intro-arms-crossed.jpg");
+const scene = await must("tangalooma-two-boats-turquoise-bay.jpg");
 
 const heroInfo = await responsive(hero, "hero", [1280, 1920, 2400, 3000]);
 const introInfo = await responsive(intro, "intro", [450, 675]);
-await responsive(helmPortrait, "bailey-helm", [450, 675]);
-await responsive(support, "support", [720, 1100]);
-await responsive(feature, "feature", [900, 1600]);
-await responsive(rest, "rest", [720, 1100]);
-await responsive(spit, "spit", [720, 1100]);
+await responsive(portrait, "bailey-portrait", [450, 675]);
+await responsive(scene, "scene", [720, 1100]);
 const logoInfo = await logo();
 await icons();
 await openGraph(hero);
@@ -149,13 +145,11 @@ const manifest = {
   hero: "tangalooma-sandbar-fleet-aerial.jpg",
   heroWidths: heroInfo.widths,
   intro: introInfo.widths,
+  portrait: "bailey-intro-arms-crossed.jpg",
+  portraitName: "bailey-portrait",
+  scene: "tangalooma-two-boats-turquoise-bay.jpg",
   logo: logoInfo,
-  gallery: [
-    "tangalooma-four-boats-clear-water.jpg",
-    "shootout-fleet-sunset-aerial.jpg",
-    "spit-marina-beach-and-yachts.jpg",
-  ],
-  removed: ["boat-works-canal-rainbow.jpg"],
+  removed: ["boat-works-canal-rainbow.jpg", "bailey-helm"],
 };
 await writeFile(path.join(outDir, "manifest.json"), JSON.stringify(manifest, null, 2));
 console.log("images ready", manifest);

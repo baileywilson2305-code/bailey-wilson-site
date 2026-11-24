@@ -35,6 +35,9 @@ const expected = [
   ["Header", "#contact"],
   ["Skip", "#content"],
   ["Instagram", "https://www.instagram.com/baileywilsonboats/"],
+  ["TikTok", "https://www.tiktok.com/@baileywilsonboats"],
+  ["YouTube", "https://www.youtube.com/@baileywilson-boats"],
+  ["LinkedIn", "https://www.linkedin.com/in/bailey-wilson-670230189"],
   ["Save my contact", "/bailey-wilson.vcf"],
   ["Map", "https://maps.google.com/?q=1/247+Bayview+Street,+Runaway+Bay+QLD+4216"],
   ["Short Marine", "https://shortmarine.com.au/"],
@@ -47,7 +50,7 @@ for (const [name, href] of expected) {
   else fail(name, href, "missing from homepage");
 }
 
-for (const id of ["content", "support", "contact", "enquiry"]) {
+for (const id of ["content", "basics", "contact", "enquiry"]) {
   if (html.includes(`id="${id}"`)) pass(`Anchor #${id}`, `#${id}`, "target id exists");
   else fail(`Anchor #${id}`, `#${id}`, "target id missing");
 }
@@ -83,7 +86,7 @@ const font = await fetch(`${base}/fonts/inter-latin-600-normal.woff2`);
 pass("Inter font", "/fonts/inter-latin-600-normal.woff2", `${font.status} ${font.headers.get("content-type")}`);
 if (font.status !== 200) fail("Inter font", "/fonts/inter-latin-600-normal.woff2", "not served");
 
-for (const asset of ["/img/hero-1280.avif", "/img/feature-1600.jpg", "/img/og.jpg", "/favicon.svg"]) {
+for (const asset of ["/img/hero-1280.avif", "/img/scene-1100.jpg", "/img/bailey-portrait-675.jpg", "/img/og.jpg", "/favicon.svg"]) {
   const res = await fetch(`${base}${asset}`);
   if (res.status === 200) pass(asset, asset, `200 ${res.headers.get("content-type")}`);
   else fail(asset, asset, `status ${res.status}`);
