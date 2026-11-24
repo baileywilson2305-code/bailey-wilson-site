@@ -91,7 +91,7 @@ for (const file of [
   "img/hero-1280.webp",
   "img/hero-1280.jpg",
   "img/bailey-portrait-675.jpg",
-  "img/scene-1100.jpg",
+  "img/scene-sunset-1100.jpg",
   "img/short-marine-logo.webp",
   "fonts/inter-latin-400-normal.woff2",
   "robots.txt",

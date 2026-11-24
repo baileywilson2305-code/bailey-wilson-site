@@ -29,7 +29,7 @@ Boat pictures are from the Short Marine marketing drive (the February 2026 Grady
 | `tangalooma-sandbar-fleet-aerial.jpg` | Hero and social image. |
 | `bailey-at-helm.jpg` | Intro portrait. |
 | `bailey-intro-arms-crossed.jpg` | Contact portrait. Built as `bailey-portrait-*` so browsers do not keep an old cached helm shot. |
-| `tangalooma-two-boats-turquoise-bay.jpg` | Single scene photo above the contact section. |
+| `shootout-fleet-sunset-aerial.jpg` | Scene photo above the contact section. Built as `scene-sunset-*` so browsers do not keep the old turquoise-bay shot. |
 
 ## Deploy on Cloudflare Workers
 

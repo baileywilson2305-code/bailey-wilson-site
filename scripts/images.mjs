@@ -131,11 +131,13 @@ const intro = await must("bailey-intro-arms-crossed.jpg");
 // New output name (bailey-portrait, not bailey-helm) so phones do not keep the
 // cached helm shot from when this URL pointed at bailey-at-helm.jpg.
 const portrait = await must("bailey-intro-arms-crossed.jpg");
-const scene = await must("tangalooma-two-boats-turquoise-bay.jpg");
+// New output name (scene-sunset, not scene) so phones do not keep the
+// cached turquoise-bay shot from when this URL pointed at tangalooma-two-boats.
+const scene = await must("shootout-fleet-sunset-aerial.jpg");
 
 const heroInfo = await responsive(hero, "hero", [1280, 1920, 2400, 3000]);
 const introInfo = await responsive(intro, "intro-portrait", [450, 675]);
-await responsive(scene, "scene", [720, 1100]);
+await responsive(scene, "scene-sunset", [720, 1100]);
 const logoInfo = await logo();
 await icons();
 await openGraph(hero);
@@ -146,7 +148,8 @@ const manifest = {
   intro: introInfo.widths,
   portrait: "bailey-intro-arms-crossed.jpg",
   portraitName: "bailey-portrait",
-  scene: "tangalooma-two-boats-turquoise-bay.jpg",
+  scene: "shootout-fleet-sunset-aerial.jpg",
+  sceneName: "scene-sunset",
   logo: logoInfo,
   removed: ["boat-works-canal-rainbow.jpg", "bailey-helm"],
 };

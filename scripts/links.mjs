@@ -86,7 +86,7 @@ const font = await fetch(`${base}/fonts/inter-latin-600-normal.woff2`);
 pass("Inter font", "/fonts/inter-latin-600-normal.woff2", `${font.status} ${font.headers.get("content-type")}`);
 if (font.status !== 200) fail("Inter font", "/fonts/inter-latin-600-normal.woff2", "not served");
 
-for (const asset of ["/img/hero-1280.avif", "/img/scene-1100.jpg", "/img/bailey-portrait-675.jpg", "/img/og.jpg", "/favicon.svg"]) {
+for (const asset of ["/img/hero-1280.avif", "/img/scene-sunset-1100.jpg", "/img/bailey-portrait-675.jpg", "/img/og.jpg", "/favicon.svg"]) {
   const res = await fetch(`${base}${asset}`);
   if (res.status === 200) pass(asset, asset, `200 ${res.headers.get("content-type")}`);
   else fail(asset, asset, `status ${res.status}`);
